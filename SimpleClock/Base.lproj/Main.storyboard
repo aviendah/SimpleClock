@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleClock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nightsky" translatesAutoresizingMaskIntoConstraints="NO" id="AeU-lQ-xnX">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daylight" translatesAutoresizingMaskIntoConstraints="NO" id="kk1-7Z-jWc">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sV8-xe-M5N">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cII-FZ-UmM">
+                                        <rect key="frame" x="156.66666666666666" y="0.0" width="79.666666666666657" height="95"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="35" name="Baskerville"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKI-gF-dcy">
+                                        <rect key="frame" x="36.666666666666657" y="94.999999999999972" width="320" height="509.33333333333326"/>
+                                        <connections>
+                                            <action selector="selectTimer:" destination="BYZ-38-t0r" eventType="valueChanged" id="y1V-Dw-wjE"/>
+                                        </connections>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLM-8a-3FD">
+                                        <rect key="frame" x="125.00000000000001" y="604.33333333333337" width="143.33333333333337" height="100.33333333333337"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Start Timer">
+                                                    <attributes>
+                                                        <font key="NSFont" size="25" name="Baskerville"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQS-sN-DXP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV1-RZ-erg">
+                                        <rect key="frame" x="173.66666666666666" y="704.66666666666663" width="45.666666666666657" height="54.333333333333371"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="20" name="Baskerville"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AeU-lQ-xnX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="BHt-sT-BDu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sV8-xe-M5N" secondAttribute="bottom" id="E3Z-Tj-PZt"/>
+                            <constraint firstAttribute="bottom" secondItem="kk1-7Z-jWc" secondAttribute="bottom" id="InC-JE-ube"/>
+                            <constraint firstItem="kk1-7Z-jWc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Iyh-8g-mGf"/>
+                            <constraint firstItem="sV8-xe-M5N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N1T-SO-n8c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sV8-xe-M5N" secondAttribute="trailing" id="WxV-RI-g2d"/>
+                            <constraint firstItem="kk1-7Z-jWc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eIq-d0-b6q"/>
+                            <constraint firstItem="AeU-lQ-xnX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kVH-BZ-e7j"/>
+                            <constraint firstItem="sV8-xe-M5N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="myU-Ok-grp"/>
+                            <constraint firstItem="AeU-lQ-xnX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nsK-y1-1Ot"/>
+                            <constraint firstAttribute="bottom" secondItem="AeU-lQ-xnX" secondAttribute="bottom" id="nze-Hm-jg0"/>
+                            <constraint firstItem="kk1-7Z-jWc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tfk-Y7-cWt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="kk1-7Z-jWc" id="D86-LO-xN5"/>
+                        <outlet property="datePicker" destination="DKI-gF-dcy" id="YyU-Mg-fWe"/>
+                        <outlet property="dateTime" destination="cII-FZ-UmM" id="6QY-3i-aHb"/>
+                        <outlet property="timerButton" destination="yLM-8a-3FD" id="3Iy-fR-ftI"/>
+                        <outlet property="timerLabel" destination="UV1-RZ-erg" id="u8e-3Y-2fF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.28169014084509" y="-28.244274809160306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="daylight" width="303.33334350585938" height="170.66667175292969"/>
+        <image name="nightsky" width="640" height="427.33334350585938"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
